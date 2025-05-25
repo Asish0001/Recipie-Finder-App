@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 DATA_FILE = 'data.json'
 app.secret_key = 'recipeFinder'
-SPOONACULAR_API_KEY = '97f32d06b94d4eefbcac1904c40fda76'
+SPOONACULAR_API_KEY = 'Your_API_Key'
 
 @app.route('/')
 def home():
