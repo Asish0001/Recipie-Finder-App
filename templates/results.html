@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Recipes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="result-body">
+    <div class="container">
+        <h1>Recipes You Can Make</h1>
+        {% if recipes %}
+            {% for recipe in recipes %}
+                <div class="recipe-card">
+                    <h3>{{ recipe.title }}</h3>
+                    <img src="{{ recipe.image }}" alt="{{ recipe.title }}" width="300">
+                    <p><strong>Ready in:</strong> {{ recipe.readyInMinutes }} minutes</p>
+                    <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+                    <p><strong>Instructions:</strong> 
+                        <span class="instructionsPreview">{{ recipe.instructions[:200] }}...</span>
+                        <span class="instructionsFull" style="display: none;">{{ recipe.instructions }}</span>
+                        <button class="toggle-btn" onclick="toggleInstructions(this)"> Show More</button>
+                    </p>
+                    <p><strong>Missing:</strong> <span class="missedIngredients"> {{recipe.missedIngredients | join(', ') }}</span></p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No recipes found with your ingredients.</p>
+        {% endif %}
+    </div>
+    <br>
+    <a href="{{ url_for('home') }}">
+        <button type="button">Back to Dashboard</button>
+    </a>
+</body>
+<script>
+    function toggleInstructions(btn){
+        const preview = btn.previousElementSibling.previousElementSibling;
+        const full = btn.previousElementSibling
+
+        if(full.style.display === "none"){
+            full.style.display = "inline";
+            preview.style.display = "none"
+            btn.textContent = "Show Less"
+        } else {
+            full.style.display = "none";
+            preview.style.display = "inline"
+            btn.textContent = "Show More"
+        }
+    }
+</script>
+</html>

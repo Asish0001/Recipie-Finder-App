@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Ingredients</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Ingredients</h1>
+        <div>Enter ingredients seperated by commas</div>
+        <form method="POST" action="/find">
+            <div class="input"> 
+                <input type="text" name="ingredients"> 
+                <button type="submit">Find Meals</button>
+            </div>
+        </form>
+        <br>
+        <a href="{{url_for('home') }}">
+            <button type="back-button">Back to Dashboard</button>
+        </a>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

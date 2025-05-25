@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <h2>Make Your Meal</h2>
+        <!--Shows the textbox with example input and submit button-->
+        <div>
+            <a href="{{url_for('add_ingredients') }}">
+                <button>Add Ingredients</button>
+            </a>
+        </div>
+        <!--shows the ingredients list-->
+        <div id="ingredientLists">
+            <h3>Your Ingredients: </h3>
+            <ul>
+                {% for item in ingredients %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <script>
+        const ingredients = [];
+        function showInput(){
+            //Makes the input section visible, by setting display to "Block"
+            document.getElementById("inputSection").style.display = 'block'
+        }
+        function updateIngredientList(){
+            //clears out the previous list
+            const ul = document.getElementById('ingredients');
+            ul.innerHTML = '';
+
+            //loops through ingredients array and adds it to the ul as list item
+            ingredients.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                ul.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

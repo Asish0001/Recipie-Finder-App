@@ -1,0 +1,20 @@
+[
+    {
+      "title": "Peanut Butter Banana Smoothie",
+      "ingredients": ["banana", "milk", "peanut butter", "honey"],
+      "instructions": "Blend all ingredients until smooth.",
+      "image": "smoothie.jpg"
+    },
+    {
+      "title": "Tomato Pasta",
+      "ingredients": ["pasta", "tomato sauce", "olive oil", "garlic"],
+      "instructions": "Cook pasta. Heat sauce with oil and garlic. Combine.",
+      "image": "pasta.jpg"
+    },
+    {
+      "title": "Avocado Toast",
+      "ingredients": ["bread", "avocado", "salt", "lemon juice"],
+      "instructions": "Toast bread. Mash avocado with lemon and salt. Spread.",
+      "image": "toast.jpg"
+    }
+]

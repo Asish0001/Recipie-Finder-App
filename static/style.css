@@ -1,0 +1,119 @@
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container{
+    max-width: 700px;
+    min-height: 91vh;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: lightgreen;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0, 0.1);
+}
+.container h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.container h2{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+button{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 20px;
+}
+button:hover{
+    background-color: #2980b9;
+}
+
+.container input {
+    width: 100%;
+    max-width: 100px;
+    max-height: 10px;
+    height: 120px;
+    padding: 10px 20px;
+    resize: none;
+    border-radius: 8px;
+}
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    text-decoration: underline;
+}
+.toggle-btn:hover {
+    text-decoration: none;
+}
+
+#ingredientLists {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgb(123, 203, 123);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0, 0.05);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+#ingredientLists h3 {
+    font-size: 20px;
+    color: #2c3e50;
+}
+#ingredientLists ul{
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+}
+#ingredientLists li{
+    background-color: rgb(113, 185, 113);
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.05);
+    font-size: 16px;
+    color: #f0f0f0;
+}
+
+.recipe-card {
+    background-color: rgb(123, 203, 123);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0, 0.1);
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.recipe-card img{
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.missedIngredients {
+    color: black;
+    font-weight: 500;
+}
