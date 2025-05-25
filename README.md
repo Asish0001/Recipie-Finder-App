@@ -18,6 +18,7 @@
 ##  Screenshots
 
 ![Dashboard](screenshots/dashboard.png)
+![Add Page](screenshots/add.png)
 ![Results Page](screenshots/results.png)
 
 ---
